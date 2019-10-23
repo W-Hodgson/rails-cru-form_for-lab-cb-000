@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New Song Form</title>
+  </head>
+  <body>
+    <%= form_for(@song) do |f| %>
+      <label>Name: </label> <br>
+      <%= f.text_field "song[name]" %> <br>
+
+      <h4>Artist</h4>
+      <% @artists.each do |artist| %>
+        <%= f.label artist.id do %>
+          <%= f.radio_button "song[artist_id]", artist.id %> <%= artist.name %>
+        <% end %>
+      <% end %> <br>
+
+      <h4>Genre</h4>
+      <% @genres.each do |genre| %>
+        <%= f.label genre.id do %>
+          <%= f.radio_button "song[genre_id]", genre.id %> <%= genre.name %>
+        <% end %>
+      <% end %> <br>
+
+      <%= f.submit %>
+    <% end %>
+  </body>
+</html>

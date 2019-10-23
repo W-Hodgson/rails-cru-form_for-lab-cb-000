@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New Genre</title>
+  </head>
+  <body>
+    <%= form_for(@genre) do |f| %>
+      <label>Name: </label> <br>
+      <%= f.text_field :name %> <br>
+
+      <%= f.submit %>
+    <% end %>
+  </body>
+</html>
