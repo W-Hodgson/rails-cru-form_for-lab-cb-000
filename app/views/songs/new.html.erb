@@ -7,7 +7,7 @@
   <body>
     <%= form_for(@song) do |f| %>
       <label>Name: </label> <br>
-      <%= f.text_field "song[name]" %> <br>
+      <%= f.text_field :name%> <br>
 
       <h4>Artist</h4>
       <% @artists.each do |artist| %>
