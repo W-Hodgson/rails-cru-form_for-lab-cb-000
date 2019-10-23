@@ -12,7 +12,7 @@
       <h4>Artist</h4>
       <% @artists.each do |artist| %>
         <%= f.label artist.id do %>
-          <%= f.radio_button :artist_id, artist.id %> <%= artist.name %>
+          <%= f.radio_button "song[artist_id]", artist.id %> <%= artist.name %>
         <% end %>
       <% end %> <br>
 
