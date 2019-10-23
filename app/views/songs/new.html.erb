@@ -19,7 +19,7 @@
       <h4>Genre</h4>
       <% @genres.each do |genre| %>
         <%= f.label genre.id do %>
-          <%= f.radio_button "song[genre_id]", genre.id %> <%= genre.name %>
+          <%= f.radio_button :genre_id, genre.id %> <%= genre.name %>
         <% end %>
       <% end %> <br>
 
