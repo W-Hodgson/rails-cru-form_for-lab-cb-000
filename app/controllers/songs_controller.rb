@@ -26,6 +26,6 @@ class SongsController < ApplicationController
 
   def update
     @song = Song.find(params[:id])
-    @song.update(params)
+    @song.update(params.require(:song))
   end
 end
