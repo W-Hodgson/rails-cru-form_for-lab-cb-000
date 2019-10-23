@@ -35,20 +35,6 @@ describe 'song form' do
     @artist = Artist.create(name: "My Artist", bio: "My artist bio")
     @genre = Genre.create(name: "My Genre")
   end
-
-  it 'shows a new form that submits content and redirects and prints out params' do
-    visit new_song_path
-
-    fill_in 'song[name]', with: "My song name"
-    fill_in 'song[artist_id]', with: @artist.id
-    fill_in 'song[genre_id]', with: @genre.id
-
-    click_on "Create Song"
-
-    expect(page).to have_content("My song name")
-  end
-
-
 end
 
 describe 'song index' do
